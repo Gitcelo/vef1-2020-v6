@@ -1,6 +1,17 @@
 // Sækja config
 @import 'styles/config';
 
+.grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.row {
+    @include row;
+  }
+
+
 // Hér skal nota scss @for til að ítra út klösum fyrir grid
 @for $i from 1 to 12 {
   .col-#{$i} {
@@ -11,4 +22,25 @@
   }
 }
 
+@media(max-width: 799px){
+  @for $i from 1 to 12 {
+    .col-md-#{$i} {
+      @include columns($i);
+    }
+    .offset-col-md-#{$i} {
+      @include offset-columns($i);
+    }
+  }
+}
+
+@media(max-width: 499px){
+  @for $i from 1 to 12 {
+    .col-sm-#{$i} {
+      @include columns($i);
+    }
+    .offset-col-sm-#{$i} {
+      @include offset-columns($i);
+    }
+  }
+}
 

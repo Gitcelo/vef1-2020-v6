@@ -62,7 +62,7 @@ $grey: #cccccc;
     background-color: $grey;
   }
 
-  .event .face.back {
+  .face.back {
     transform: rotateY(180deg);
   }
 
@@ -70,7 +70,7 @@ $grey: #cccccc;
     display: flex;
   }
 
-  .event .front h3 {
+  .front h3 {
     margin: auto;
     font-size: 2em;
     text-align: center;
