@@ -2,3 +2,15 @@
 @import './config';
 
 // Hér skal nota scss @for til að ítra út klösum fyrir grid
+&__row {
+  @include row;
+  flex-wrap: wrap
+
+@for $i from 1 to 12 {
+  .col-#{$i} {
+    @include column($i);
+  }
+  .offset-col-#{$i} {
+    @include offset-column($i);
+  }
+}
