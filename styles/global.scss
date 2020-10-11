@@ -1,2 +1,49 @@
 // Sækja config
 // Allir stílar fyrir "global", þ.e.a.s. type selectorar, reset etc
+$dark-grey: #222222;
+$white: #eeeeee;
+$black: #000000;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-size: 16px;
+    font-family: 'Open Sans', helvetica, arial, sans-serif;
+    color: $dark-grey;
+  }
+  
+  a {
+    color: $dark-grey;
+  }
+  
+  button {
+    background-color: $dark-grey;
+    color: $white;
+    border: 1px solid $black;
+    border-radius: 5px;
+    padding: 0.5rem;
+    word-break: initial;
+  
+    transition:
+      color 300ms ease-in-out,
+      background-color 300ms ease-in-out ;
+  }
+  
+  button:hover {
+    background-color: $white;
+    color: $dark-grey;
+  }
+  
+  button:active {
+    background-color: $dark-grey;
+    color: $white;
+    border: 1px solid $black;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: 'Montaga', Georgia, serif;
+  }
