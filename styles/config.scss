@@ -10,19 +10,23 @@ $gutter: 20px;
     overflow: hidden;
   }
 
+  .row { //Ég reyndi að nota @mixin row() en stylelint kvartaði yfir að ég væri að nota
+         //display: flex. Vitiði af hverju það gerist?
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
 
-
-@mixin row() {
-  display: flex;
-
-  margin-right: -($gutter / 2);
-  margin-left: -($gutter / 2);
-}
-
-@mixin columns($col: 1) {
+@mixin columns($col) {
   // margföldum með "1%" til að breyta gildi í prósentu gildi
   width: ($col / 12 * 100) * 1%;
 
   padding-right: $gutter / 2;
   padding-left: $gutter / 2;
+}
+
+@mixin offset-columns($col){
+  @include columns($col);
+  margin-left: ($col / 12 * 100) * 1%;
 }
